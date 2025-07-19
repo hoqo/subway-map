@@ -1,12 +1,18 @@
-<svg id="river" fill="none" height="747" width="100%" viewBox="0 0 3500 3500" xmlns="http://www.w3.org/2000/svg">
+<svg
+	id="river"
+	height="747"
+	width="100%"
+	viewBox="0 0 3500 3500"
+	xmlns="http://www.w3.org/2000/svg"
+>
 	<style id="style4855">
-      .a {
-          fill-opacity: 0.8;
-          fill: #aae3ff;
-          opacity: 0.8;
-          stroke-opacity: 0.6;
-          stroke: #7cd5ff;
-      }
+		.a {
+			fill-opacity: 0.8;
+			fill: #aae3ff;
+			opacity: 0.8;
+			stroke-opacity: 0.6;
+			stroke: #7cd5ff;
+		}
 	</style>
 	<clipPath id="p.0">
 		<path id="path4857" d="m0 0l1020.4 0 0 747.1 -1020.4 0 0-747.1z" />

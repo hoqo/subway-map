@@ -30,12 +30,14 @@ yarn              # Install all dependencies
 ## Architecture & Code Structure
 
 ### Core Technologies
+
 - **SvelteKit 2.22.0** with Svelte 5 - Application framework
 - **TypeScript** - Type safety with strict mode enabled
 - **D3.js** - SVG path generation for subway lines (Catmull-Rom splines)
 - **Vite** - Build tool and dev server
 
 ### Application Structure
+
 The app follows SvelteKit's file-based routing with a single page displaying the subway map:
 
 - **`src/routes/+page.svelte`** - Main page with header, map container, and legend
@@ -46,6 +48,7 @@ The app follows SvelteKit's file-based routing with a single page displaying the
 - **`src/lib/components/Legend/`** - Color-coded legend components
 
 ### Data Model
+
 - **`iSubwayLine`** - Represents a subway line with:
   - `name`: string (line name)
   - `color`: string (hex color)
@@ -55,6 +58,7 @@ The app follows SvelteKit's file-based routing with a single page displaying the
   - `x`, `y`: number (SVG coordinates)
 
 ### Styling Approach
+
 - Global styles in `src/lib/global.css`
 - Component-scoped styles using Svelte's `<style>` blocks
 - Fixed layout: header (82px), map container (747px), legend footer
@@ -62,6 +66,7 @@ The app follows SvelteKit's file-based routing with a single page displaying the
 ## Development Notes
 
 When modifying the subway map:
+
 1. Station coordinates are defined in `src/lib/components/Map/mocks.ts`
 2. The map uses a 3500x3500 SVG coordinate system
 3. D3's curveCardinal creates smooth curves between stations

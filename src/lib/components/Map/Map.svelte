@@ -2,7 +2,7 @@
 	// import River from '$lib/components/River/River.svelte';
 	import { subwayLines } from './mocks';
 	import { curveCatmullRom, line } from 'd3';
-	import type {iSubwayStation} from "$lib/interfaces";
+	import type { iSubwayStation } from '$lib/interfaces';
 
 	const lineGenerator = line().curve(curveCatmullRom.alpha(1));
 
@@ -17,14 +17,10 @@
 
 <!--<River />-->
 
-<svg id="map" height="747" width="100%" viewBox="0 0 3500 3500" fill="none">
+<svg id="map" height="747" width="100%" viewBox="0 0 3500 3500">
 	{#each subwayLines as { nodes, colorCode, name } (name)}
 		<g fill="none">
-			<path
-				d={lineGenerator(getPathD(nodes))}
-				stroke={colorCode}
-				stroke-width="30"
-			/>
+			<path d={lineGenerator(getPathD(nodes))} stroke={colorCode} stroke-width="30" />
 
 			{#each getSwStations(nodes) as { name, point: { x, y } } (name)}
 				<circle cx={x} cy={y} fill={colorCode} r="50" />
